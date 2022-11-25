@@ -1,0 +1,64 @@
+4)Exercise - Guess the output
+For each of the following, try to work out what the output will be. Run the code in the browser console to check your answer.
+1.
+var a = 12;
+(function() {
+ console.log(a);
+})();
+Soln. 12
+2.
+var a = 5;
+(function() {
+ var a = 12;
+ console.log(a);
+})();
+
+Soln. 12
+
+3.
+var a = 10;
+var x = (function() {
+ var a = 12;
+ return (function() {
+   console.log(a);
+ });
+})();
+x();
+Soln. 12
+
+
+
+
+4.
+var a = 10;
+var x = (function() {
+ var y = function() {
+   var a = 12;
+ };
+ return function() {
+   console.log(a);
+ }
+})();
+x();
+Soln. 12
+5.
+var a = 10;
+var x = (function() {
+ (function() {
+   a = 12; // <<< look carefully at this line.
+ })();
+ return (function() {
+   console.log(a);
+ });
+})();
+x(); 
+6.
+var a = 10;
+(function() {
+ var a = 15;
+ window.x = function() {
+   console.log(a);
+ }
+})();
+x();
+Soln. 12
