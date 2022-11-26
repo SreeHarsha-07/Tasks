@@ -8,5 +8,5 @@ function sandwitchCalculator(bread,cheese){
       return count;
     }
     
-    console.log(sandwitchCalculator(5,4));
+    console.log(sandwitchCalculator(10,4));
     
